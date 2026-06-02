@@ -53,7 +53,7 @@ ORDER BY Tasa_conversion DESC;
 Para la fase de visualización, se optó por una arquitectura de **Tabla Plana** debido al volumen controlado del dataset, priorizando la agilidad en el cálculo de medidas dinámicas DAX y garantizando una interactividad del 100% para el usuario final.
 
 ### 📸 Vista del Dashboard
-![Dashboard de Marketing Bancario](./02_Power_BI_Dashboard/dashboard_screenshot.png)
+![Dashboard de Marketing Bancario](./02_Power_BI_Dashboard/dashboard_screenshot.png.png)
 
 ### 🎨 Decisiones de Diseño UI/UX y Estructura:
 *   **Enfoque Corporativo:** Paleta de colores basada en una gama de azules financieros sobre fondo limpio para transmitir rigor, seriedad y facilitar la lectura en entornos ejecutivos.
