@@ -15,7 +15,7 @@ Antes de realizar cualquier desarrollo visual, se importó el dataset plano en u
 
 ### 🔍 Métricas Clave Validadas:
 *   **Volumen de Control:** Validación de la muestra total analizada ($11.162$ clientes) y de la tasa de conversión global de la campaña (47%).
-*   **Análisis de Perfiles (`job`):** Segmentación exhaustiva para calcular el porcentaje de éxito por profesión, identificando que los **Estudiantes ($75\%$)** y los **Jubilados ($66\%$)** son los perfiles con mayor intención de contratación.
+*   **Análisis de Perfiles (`job`):** Segmentación exhaustiva para calcular el porcentaje de éxito por profesión, identificando que los **Estudiantes (75%)** y los **Jubilados (66%)** son los perfiles con mayor intención de contratación.
 *   **Cruces de Endeudamiento:** Extracción de datos cruzando variables de riesgo crediticio para aislar comportamientos de compra.
 
 > 💡 *Puedes consultar el script con la lógica de negocio y las consultas estructuradas en: [`01_SQL_Analysis/bank_marketing_queries.sql`](./01_SQL_Analysis/bank_marketing_queries.sql).*
