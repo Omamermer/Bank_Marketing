@@ -15,15 +15,38 @@ Antes de realizar cualquier desarrollo visual, se importó el dataset plano en u
 
 ### 🔍 Métricas Clave Validadas:
 *   **Volumen de Control:** Validación de la muestra total analizada ($11.162$ clientes) y de la tasa de conversión global de la campaña (47%).
-*   ```dax
-  	SELECT
+```sql
+SELECT
     COUNT(*) AS Total_Clientes_Contactados,
 	SUM(CASE WHEN deposit = "yes" THEN 1 ELSE 0 END) AS Clientes_Ganados,
 	ROUND((SUM(CASE WHEN deposit = "yes" THEN 1 ELSE 0 END) / COUNT(*)) * 100,2) AS Tasa_Conversion_Global,
 	SUM(CASE WHEN  deposit = "yes" THEN balance ELSE 0 END) AS Balance_Total_Captado
-	FROM bank_marketing b ```
+FROM bank_marketing b
+```
 *   **Análisis de Perfiles (`job`):** Segmentación exhaustiva para calcular el porcentaje de éxito por profesión, identificando que los **Estudiantes (75%)** y los **Jubilados (66%)** son los perfiles con mayor intención de contratación.
+```sql
+SELECT 
+	b.job AS Puesto_de_trabajo,
+	b.education AS nivel_estudios,
+	COUNT(*) AS Total_contactos,
+	SUM(CASE WHEN deposit = "yes" THEN 1 ELSE 0 END) AS Exitos,
+	ROUND((SUM(CASE WHEN deposit = "yes" THEN 1 ELSE 0 END) / COUNT(*)) * 100,2) AS Tasa_Exito_Perfil
+FROM bank_marketing b
+GROUP BY b.job, b.education
+HAVING total_contactos >50
+ORDER BY tasa_exito_Perfil DESC
+```
 *   **Cruces de Endeudamiento:** Extracción de datos cruzando variables de riesgo crediticio para aislar comportamientos de compra.
+```sql
+SELECT
+	housing AS tiene_hipoteca,
+	loan AS tiene_prestaamo,
+	COUNT(*) AS total_contactos,
+	ROUND((SUM(CASE WHEN b.deposit = "yes" THEN 1 ELSE 0 END) / COUNT(*)) * 100,2) AS Tasa_conversion
+FROM bank_marketing b
+GROUP BY housing, loan
+ORDER BY Tasa_conversion DESC;
+```
 
 > 💡 *Puedes consultar el script con la lógica de negocio y las consultas estructuradas en: [`01_SQL_Analysis/bank_marketing_queries.sql`](./01_SQL_Analysis/bank_marketing_queries.sql).*
 
