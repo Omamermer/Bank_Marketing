@@ -48,10 +48,6 @@ GROUP BY housing, loan
 ORDER BY Tasa_conversion DESC;
 ```
 
-> 💡 *Puedes consultar el script con la lógica de negocio y las consultas estructuradas en: [`01_SQL_Analysis/bank_marketing_queries.sql`](./01_SQL_Analysis/bank_marketing_queries.sql).*
-
----
-
 ## 📊 Fase 2: Cuadro de Mando Ejecutivo (Power BI)
 
 Para la fase de visualización, se optó por una arquitectura de **Tabla Plana** debido al volumen controlado del dataset, priorizando la agilidad en el cálculo de medidas dinámicas DAX y garantizando una interactividad del 100% para el usuario final.
