@@ -74,4 +74,3 @@ Para la fase de visualización, se optó por una arquitectura de **Tabla Plana**
 *   **SQL (MySQL)** - Extracción, filtrado y validación de reglas de negocio.
 *   **HeidiSQL** - Entorno de desarrollo para la gestión de consultas.
 *   **Power BI Desktop** - Modelado de datos, DAX y diseño de interfaz de usuario.
-*   **Markdown** - Documentación del proyecto.
