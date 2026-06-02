@@ -14,7 +14,7 @@ El proyecto simula un flujo de trabajo profesional dividido en dos fases estrat�
 Antes de realizar cualquier desarrollo visual, se importó el dataset plano en una base de datos local para realizar un control de calidad y extraer los primeros *insights* directamente desde el motor de base de datos.
 
 ### 🔍 Métricas Clave Validadas:
-*   **Volumen de Control:** Validación de la muestra total analizada ($11.162$ clientes) y de la tasa de conversión global de la campaña ($47\%$).
+*   **Volumen de Control:** Validación de la muestra total analizada ($11.162$ clientes) y de la tasa de conversión global de la campaña ($47%$).
 *   **Análisis de Perfiles (`job`):** Segmentación exhaustiva para calcular el porcentaje de éxito por profesión, identificando que los **Estudiantes ($75\%$)** y los **Jubilados ($66\%$)** son los perfiles con mayor intención de contratación.
 *   **Cruces de Endeudamiento:** Extracción de datos cruzando variables de riesgo crediticio para aislar comportamientos de compra.
 
